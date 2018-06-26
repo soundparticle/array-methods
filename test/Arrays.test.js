@@ -14,7 +14,7 @@ describe('array methods', () => {
     describe ('map', () => {
         it('maps numbers', () => {
             const numbers = [1, 2, 3]; 
-            const mapped = map(numbers, n => n + 1);
+            const mapped = map(numbers, (n) => n + 1);
             assert.deepEqual(mapped, [2, 3, 4]);
         });
     });
