@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { map, filter, findIndex, reduce } = require('../lib/arrays');
+const { map, filter, findIndex, reduce } = require('./lib/arrays');
 
 
 
@@ -51,5 +51,5 @@ describe('array methods', () => {
             assert.deepEqual(reduced, 6);
         });
     });
-    
+
 });
