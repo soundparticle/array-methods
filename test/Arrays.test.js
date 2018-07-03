@@ -1,10 +1,10 @@
 const assert = require('assert');
-const { map, filter, findIndex, reduce } = require('../lib/Arrays');
+const { map, filter, findIndex, reduce, every } = require('../lib/Arrays');
 
 
 
 describe('array methods', () => {
-    // map array
+    // Map array
     describe('map assumptions', () => {
         it('maps an array', () => {
             const numbers = [1, 2, 3]; 
@@ -34,7 +34,7 @@ describe('array methods', () => {
             assert.deepEqual(filtered, [1, 2]);
         });
     });
-    //Find index of arrays
+    // Find index of arrays
     describe('find index', () => {
         it('finds first index', () => {
             const numbers = [1, 2, 3];
@@ -43,7 +43,7 @@ describe('array methods', () => {
         });
 
     });
-    //Reduce arrays
+    // Reduce arrays
     describe('reduce array', () => {
         it('reduces to single value', () => {
             const numbers = [1, 2, 3];
@@ -51,5 +51,12 @@ describe('array methods', () => {
             assert.deepEqual(reduced, 6);
         });
     });
-
+    // Every
+    describe('every array requirement', () => {
+        it('array values should meet requirement', () => {
+            const numbers = [1, 2, 3];
+            const every = numbers.every(x => x <= 3);
+            assert.deepEqual(every, true);
+        });
+    });
 });
